@@ -5,6 +5,9 @@ import android.annotation.SuppressLint;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
@@ -88,18 +91,14 @@ public class FullscreenDisplayNumberActivity extends AppCompatActivity {
         }
     };
 
+    private SensorManager mSensorManager;
+    private Sensor mAccelerometer;
+    private ShakeDetector mShakeDetector;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("Selected Score");
         setContentView(R.layout.activity_fullscreen_display_number);
-//
-//        ActionBar actionBar = getSupportActionBar();
-//        if (actionBar != null) {
-//            actionBar.setDisplayHomeAsUpEnabled(true);
-//        }
-
-
 
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
@@ -110,15 +109,30 @@ public class FullscreenDisplayNumberActivity extends AppCompatActivity {
         mContentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                toggle();
+                showScore();
             }
         });
 
-        // Upon interacting with UI controls, delay any scheduled hide()
-        // operations to prevent the jarring behavior of controls going away
-        // while interacting with the UI.
-//        findViewById(R.id.btnEight).setOnTouchListener(mDelayHideTouchListener);
+        Intent intent = new Intent(this, ShakeService.class);
+        //Start Service
+        startService(intent);
 
+        // ShakeDetector initialization
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mAccelerometer = mSensorManager
+                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mShakeDetector = new ShakeDetector();
+        mShakeDetector.setOnShakeListener(new ShakeDetector.OnShakeListener() {
+
+            @Override
+            public void onShake(int count) {
+                showScore();
+            }
+        });
+
+    }
+
+    protected void showScore() {
 
         Intent intent = getIntent();
         String displayNumber = intent.getStringExtra("display_number");
@@ -141,7 +155,19 @@ public class FullscreenDisplayNumberActivity extends AppCompatActivity {
         // are available.
         delayedHide(100);
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Add the following line to register the Session Manager Listener onResume
+        mSensorManager.registerListener(mShakeDetector, mAccelerometer,	SensorManager.SENSOR_DELAY_UI);
+    }
 
+    @Override
+    public void onPause() {
+        // Add the following line to unregister the Sensor Manager onPause
+        mSensorManager.unregisterListener(mShakeDetector);
+        super.onPause();
+    }
     private void toggle() {
         if (mVisible) {
             hide();

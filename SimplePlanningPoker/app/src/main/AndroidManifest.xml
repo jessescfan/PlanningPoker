@@ -13,9 +13,9 @@
         <activity
             android:name=".FullscreenDisplayNumberActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
             android:label="@string/title_activity_fullscreen_display_number"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".ShakeService"></service>
+
     </application>
 
 </manifest>
