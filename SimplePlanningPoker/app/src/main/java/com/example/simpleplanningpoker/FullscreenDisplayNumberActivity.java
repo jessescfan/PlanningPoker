@@ -32,6 +32,9 @@ public class FullscreenDisplayNumberActivity extends AppCompatActivity {
 
         int bgColor = getRandomColor();
         mContentView.setBackgroundColor(bgColor);
+        TextView text = (TextView)mContentView;
+        int textColor = getRandomColor();
+        text.setTextColor(textColor);
 
         Intent intent = new Intent(this, ShakeService.class);
         //Start Service
@@ -67,11 +70,6 @@ public class FullscreenDisplayNumberActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String displayNumber = intent.getStringExtra("display_number");
         TextView text = (TextView)mContentView;
-
-        int textColor = getRandomColor();
-
-        text.setTextColor(textColor);
-
         if (displayNumber.toLowerCase().contains("coffee")) {
             text.setTextSize(100);
         } else {
