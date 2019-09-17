@@ -1,4 +1,4 @@
-package com.example.simpleplanningpoker;
+package com.initial.simpleplanningpoker;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;

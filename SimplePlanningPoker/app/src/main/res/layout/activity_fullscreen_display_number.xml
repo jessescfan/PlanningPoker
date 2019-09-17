@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scaleType="centerCrop"
-    tools:context="com.example.simpleplanningpoker.FullscreenDisplayNumberActivity"
+    tools:context="com.initial.simpleplanningpoker.FullscreenDisplayNumberActivity"
     android:background="@android:color/background_light">
 
     <TextView

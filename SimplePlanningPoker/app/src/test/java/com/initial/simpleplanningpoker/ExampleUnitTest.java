@@ -1,4 +1,4 @@
-package com.example.simpleplanningpoker;
+package com.initial.simpleplanningpoker;
 
 import org.junit.Test;
 

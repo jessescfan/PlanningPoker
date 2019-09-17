@@ -1,4 +1,4 @@
-package com.example.simpleplanningpoker;
+package com.initial.simpleplanningpoker;
 
 import android.app.Service;
 import android.content.Context;
