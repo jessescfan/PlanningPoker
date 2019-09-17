@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--    android:paddingBottom="@dimen/activity_vertical_margin"-->
-<!--    android:paddingLeft="@dimen/activity_horizontal_margin"-->
-<!--    android:paddingRight="@dimen/activity_horizontal_margin"-->
-<!--    android:paddingTop="@dimen/activity_vertical_margin"-->
-<!--    tools:context="com.jessematlock.simpleplanningpoker.MainActivity">-->
 
     <Button
         android:text="@string/text_100"
@@ -18,7 +12,7 @@
         android:id="@+id/btnOneHundred"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_alignBaseline="@+id/btnFourty"
         android:layout_centerHorizontal="true"
@@ -31,7 +25,7 @@
         android:id="@+id/btnThree"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_alignBaseline="@+id/btnTwo"
         android:layout_centerHorizontal="true" />
@@ -43,7 +37,7 @@
         android:id="@+id/btnTwo"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_below="@+id/btnZero"
         android:layout_alignParentLeft="true"
@@ -57,7 +51,7 @@
         android:id="@+id/btnFourty"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_below="@+id/btnEight"
         android:layout_alignParentLeft="true"
@@ -71,7 +65,7 @@
         android:id="@+id/btnEight"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_below="@+id/btnTwo"
         android:layout_alignParentLeft="true"
@@ -84,7 +78,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnQuestion"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:onClick="clickFunction"
         android:layout_alignBaseline="@+id/btnOneHundred"
@@ -98,7 +92,7 @@
         android:id="@+id/btnOneHalf"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -110,7 +104,7 @@
         android:id="@+id/btnZero"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -123,7 +117,7 @@
         android:id="@+id/btnOne"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
@@ -136,7 +130,7 @@
         android:id="@+id/btnFive"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_alignBaseline="@+id/btnThree"
         android:layout_alignParentRight="true"
@@ -149,7 +143,7 @@
         android:id="@+id/btnThirteen"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_centerHorizontal="true"
         android:layout_alignBaseline="@+id/btnEight" />
@@ -161,7 +155,7 @@
         android:id="@+id/btnTwenty"
         android:onClick="clickFunction"
         app:fontFamily="sans-serif-medium"
-        android:textSize="14sp"
+        android:textSize="18sp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_alignBaseline="@+id/btnThirteen"
         android:layout_alignParentRight="true"
@@ -177,6 +171,7 @@
         android:layout_alignBaseline="@+id/button"
         android:layout_alignBottom="@+id/button"
         android:layout_toRightOf="@+id/btnOneHundred"
+        android:textSize="18sp"
         android:layout_toEndOf="@+id/btnOneHundred" />
 
     <Button
@@ -187,6 +182,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_marginTop="35dp"
         android:id="@+id/button"
+        android:textSize="18sp"
         android:layout_below="@+id/btnOneHundred"
         android:layout_toLeftOf="@+id/btnOneHundred"
         android:layout_toStartOf="@+id/btnOneHundred" />

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AmbryPlanningPoker</string>
+    <string name="app_name">APlanning Poker</string>
     <string name="title_activity_fullscreen_display_number">Selected Score</string>
 
     <string name="text_0">0</string>
@@ -17,5 +17,5 @@
     <string name="text_infinite">&#8734;</string>
     <string name="text_question">\?</string>
 
-    <string name="activity_fullscreen_label">Shake or touch to show your score!</string>
+    <string name="activity_fullscreen_label">Shake or tap to reveal</string>
 </resources>

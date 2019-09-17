@@ -1,38 +1,24 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scaleType = "centerCrop"
+    android:scaleType="centerCrop"
     tools:context="com.example.simpleplanningpoker.FullscreenDisplayNumberActivity"
     android:background="@android:color/background_light">
 
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:scaleType="center"
-        android:adjustViewBounds="false"
-        app:srcCompat="@drawable/logo_smaller_png"
-        android:overScrollMode="never" />
-
     <TextView
         android:id="@+id/fullscreen_content"
+        android:onClick="toggleScore"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:textColor="@color/colorAccent"
         android:textSize="60sp"
         android:textStyle="bold"
-        android:text="@string/activity_fullscreen_label" />
-
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows. -->
+        android:text="@string/activity_fullscreen_label"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"
+        />
 
     <FrameLayout
         android:layout_width="match_parent"

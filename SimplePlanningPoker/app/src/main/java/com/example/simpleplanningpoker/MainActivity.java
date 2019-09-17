@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         String display = "display_number";
         Intent intent = new Intent(view.getContext(), FullscreenDisplayNumberActivity.class);
         intent.putExtra(display, btn.getText());
+
         startActivity(intent);
     }
 
